@@ -5,7 +5,7 @@
 ##################################################################
 
 library("readxl")
-nhefs <- read_excel("F:/Homework/Textbooks/Hernan - Causal Inferences/nhefs.xls")
+nhefs <- read_excel("nhefs.xls")
 
 # some preprocessing of the data 
 nhefs$survtime <- ifelse(nhefs$death==0, 120, 
@@ -211,7 +211,7 @@ ggplot(gf.graph, aes(x=time, y=surv)) +
 ##################################################################
 
 # some preprocessing of the data
-nhefs <- read_excel("F:/Homework/Textbooks/Hernan - Causal Inferences/nhefs.xls")
+nhefs <- read_excel("nhefs.xls")
 nhefs$survtime <- ifelse(nhefs$death==0, NA, (nhefs$yrdth-83)*12+nhefs$modth) # * yrdth ranges from 83 to 92
 
 # model to estimate E[A|L]
